@@ -1,6 +1,6 @@
-package repositories;
+package sn.uasz.genseignement.repositories;
 
-import entities.Enseignant;
+import sn.uasz.genseignement.entities.Enseignant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

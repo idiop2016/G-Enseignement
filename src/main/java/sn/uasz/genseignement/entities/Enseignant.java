@@ -1,4 +1,4 @@
-package entities;
+package sn.uasz.genseignement.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
