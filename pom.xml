@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>sn.uasz</groupId>
-    <artifactId>G-Enseignement</artifactId>
+    <artifactId>GEnseignement</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>G-Enseignement</name>
     <description>G-Enseignement</description>
