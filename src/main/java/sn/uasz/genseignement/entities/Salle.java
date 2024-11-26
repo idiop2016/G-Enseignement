@@ -19,6 +19,7 @@ public class Salle {
     private boolean climatisation;
     private String commentaire;
     private boolean activer;
+
     private String createby;
     private String createat;
 }

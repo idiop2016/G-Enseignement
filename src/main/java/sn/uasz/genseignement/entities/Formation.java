@@ -12,10 +12,18 @@ public class Formation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String libelle;
-    private String departement;
-    private String ufr;
+
+    @ManyToOne
+    @JoinColumn(name = "ufr_id")
+    private UFR ufr;
+
+    @ManyToOne
+    @JoinColumn(name = "departement_id")
+    private Departement departement;
+
     @OneToMany
     private List<Classe> classes;
+
     private String createby;
     private String createat;
 }

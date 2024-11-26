@@ -12,7 +12,10 @@ public class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private String nom;
+    private String prenom;
+    private String email;
+    private String password;
     private String createby;
     private String createat;
 }

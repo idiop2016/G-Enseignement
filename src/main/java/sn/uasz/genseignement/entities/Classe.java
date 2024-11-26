@@ -3,6 +3,8 @@ package sn.uasz.genseignement.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Classe {
@@ -16,10 +18,12 @@ public class Classe {
     @JoinColumn(name = "formation_id")
     private Formation formation;
 
-/*    @ManyToMany
-    private Salle salle;*/
-
+    @OneToOne
+    private Maquette maquette;
+    @ManyToOne
+    private Salle salle;
     private String semestre;
+
     private String createby;
     private String createat;
 }

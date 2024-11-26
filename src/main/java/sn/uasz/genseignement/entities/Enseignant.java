@@ -1,9 +1,6 @@
 package sn.uasz.genseignement.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -19,8 +16,14 @@ public class Enseignant {
     private String email;
     private String status;
     private String grade;
-    private String departement;
-    private String idUtilisateur;
+
+    @ManyToOne
+    @JoinColumn(name = "departement_id")
+    private Departement departement;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private Utilisateur user;
     private String createdby;
     private String createat;
 }

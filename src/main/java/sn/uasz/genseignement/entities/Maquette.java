@@ -1,9 +1,6 @@
 package sn.uasz.genseignement.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -11,7 +8,11 @@ import lombok.*;
 public class Maquette {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private String code;
+    private String libelle;
+    @ManyToOne
+    @JoinColumn(name = "formation_id")
+    private Formation formation;
     private String createby;
     private String createat;
 }
