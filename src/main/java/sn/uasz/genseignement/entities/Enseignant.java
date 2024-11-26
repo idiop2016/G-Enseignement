@@ -3,6 +3,8 @@ package sn.uasz.genseignement.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Enseignant {
@@ -24,6 +26,10 @@ public class Enseignant {
     @OneToOne
     @JoinColumn(name = "user_id")
     private Utilisateur user;
+
+    @OneToMany
+    private List<Choix> choixes;
+
     private String createdby;
     private String createat;
 }

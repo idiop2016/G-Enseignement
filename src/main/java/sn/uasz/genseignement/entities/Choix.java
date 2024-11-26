@@ -3,28 +3,22 @@ package sn.uasz.genseignement.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
-public class Classe {
+public class Choix {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nom;
-    private String niveau;
-    private int nbreetudiant;
-    @ManyToOne
-    @JoinColumn(name = "formation_id")
-    private Formation formation;
-
-    @OneToOne
-    private Maquette maquette;
 
     @ManyToOne
-    private Salle salle;
+    @JoinColumn(name = "enseignant_id")
+    private Enseignant enseignant;
 
-    private String semestre;
+    @ManyToOne
+    @JoinColumn(name = "enseignement_id")
+    private Enseignement enseignement;
+
+    private String dateModification;
 
     private String createby;
     private String createat;

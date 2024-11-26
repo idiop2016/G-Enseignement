@@ -27,6 +27,9 @@ public class UE {
     @OneToMany
     private List<EC> ecs;
 
+    @OneToMany
+    private List<Enseignement> enseignements;
+
     private String createby;
     private String createat;
 }

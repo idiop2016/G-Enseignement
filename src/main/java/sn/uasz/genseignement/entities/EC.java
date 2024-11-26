@@ -3,6 +3,8 @@ package sn.uasz.genseignement.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class EC {
@@ -17,9 +19,14 @@ public class EC {
     private int tp;
     private int tpe;
     private  String semestre;
+
     @ManyToOne
     @JoinColumn(name = "ue_id")
     private UE ue;
+
+    @OneToMany
+    private List<Enseignement> enseignements;
+
     private String createby;
     private String createat;
 }
