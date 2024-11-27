@@ -16,6 +16,9 @@ public class Utilisateur {
     private String prenom;
     private String email;
     private String password;
+    private String type;
+    private String role;
+    private boolean activer;
     private String createby;
     private String createat;
 }

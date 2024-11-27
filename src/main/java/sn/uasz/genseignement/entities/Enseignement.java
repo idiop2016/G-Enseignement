@@ -25,6 +25,9 @@ public class Enseignement {
     @OneToMany
     private List<Choix> choixes;
 
+    @OneToMany
+    private List<Seance> seances;
+
     private String createby;
     private String createat;
 }

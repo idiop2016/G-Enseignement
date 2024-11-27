@@ -1,11 +1,10 @@
 package sn.uasz.genseignement.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
@@ -19,6 +18,9 @@ public class Salle {
     private boolean climatisation;
     private String commentaire;
     private boolean activer;
+
+    @OneToMany
+    private List<Seance> seances;
 
     private String createby;
     private String createat;

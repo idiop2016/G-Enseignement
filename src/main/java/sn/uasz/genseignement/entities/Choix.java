@@ -20,6 +20,8 @@ public class Choix {
 
     private String dateModification;
 
+    private boolean validation;
+
     private String createby;
     private String createat;
 }
