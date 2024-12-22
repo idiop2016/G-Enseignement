@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+<body>
+<h2>Liste des enseignants</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th><th>Matricule</th><th>Nom</th><th>Prénom</th><th>Téléphone</th><th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="p:${listePatientsM}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.matricule}"></td>
+            <td th:text="${p.nom}"></td>
+            <td th:text="${p.prenom}"></td>
+            <td th:text="${p.telephone}"></td>
+            <td th:text="${p.email}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

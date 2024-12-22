@@ -21,10 +21,27 @@ public class GEnseignementApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        Enseignant e1 =Enseignant.builder()
+                .matricule("181185/D")
+                .nom("Diop")
+                .prenom("Ibrahima")
+                .build();
+        enseignantRepository.save(e1);
 
-        enseignantRepository.save(new Enseignant(null,"181185/D","Diop","Ibrahima",null,null,null,null,null,null,null,null));
-        enseignantRepository.save(new Enseignant(null,"181186/A","Fall","Modou",null,null,null,null,null,null,null,null));
-        enseignantRepository.save(new Enseignant(null,"181187/B","Ndiaye","Ibrahima",null,null,null,null,null,null,null,null));
+        Enseignant e2 = Enseignant.builder()
+                .matricule("181186/A")
+                .nom("Fall")
+                .prenom("Modou")
+                .build();
+        enseignantRepository.save(e2);
+
+        Enseignant e3 = Enseignant.builder()
+                .matricule("181187/B")
+                .nom("Ndiaye")
+                .prenom("Ibrahima")
+                .build();
+        enseignantRepository.save(e3);
+
         List<Enseignant> enseignents = enseignantRepository.findByPrenomContainsIgnoreCase("Ibra");
         enseignents.forEach(enseignant -> {
             System.out.println("--------------------");
