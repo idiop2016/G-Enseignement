@@ -18,11 +18,6 @@ public class Seance {
     private Date debut;
     private Date fin;
 
-    @ManyToOne
-    private EmploisDuTemps emploisDuTemps;
-
-    @ManyToOne
-    private Enseignement enseignement;
 
     @ManyToOne
     private Salle salle;

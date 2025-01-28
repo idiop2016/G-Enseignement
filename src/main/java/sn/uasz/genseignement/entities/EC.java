@@ -24,8 +24,6 @@ public class EC {
     @JoinColumn(name = "ue_id")
     private UE ue;
 
-    @OneToMany
-    private List<Enseignement> enseignements;
 
     private String createby;
     private String createat;
