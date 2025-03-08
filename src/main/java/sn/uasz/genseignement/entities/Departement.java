@@ -4,11 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
+@AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Departement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

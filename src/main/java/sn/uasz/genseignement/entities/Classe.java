@@ -9,22 +9,18 @@ import java.util.List;
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Classe {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    private String niveau;
-    private int nbreetudiant;
     @ManyToOne
-    @JoinColumn(name = "formation_id")
+    private Niveau niveau;
+    private int nbreEtudiant;
+    @ManyToOne
     private Formation formation;
-
-    @OneToOne
-    private Maquette maquette;
-
+    @ManyToOne
+    private Cycle cycle;
     @ManyToOne
     private Salle salle;
-
-    private String semestre;
 
     private String createby;
     private String createat;

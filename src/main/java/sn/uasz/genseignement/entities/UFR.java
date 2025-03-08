@@ -6,11 +6,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
+@AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class UFR {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

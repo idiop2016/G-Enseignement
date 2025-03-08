@@ -9,7 +9,7 @@ import java.util.List;
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Formation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String libelle;
 

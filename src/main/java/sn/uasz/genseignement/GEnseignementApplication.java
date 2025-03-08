@@ -8,14 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
 
 @SpringBootApplication
-public class GEnseignementApplication implements CommandLineRunner {
+public class GEnseignementApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GEnseignementApplication.class, args);
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
-
     }
 }

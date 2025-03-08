@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 public class Salle {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String typeSalle;
@@ -18,9 +18,6 @@ public class Salle {
     private boolean climatisation;
     private String commentaire;
     private boolean activer;
-
-    @OneToMany
-    private List<Seance> seances;
 
     private String createby;
     private String createat;
